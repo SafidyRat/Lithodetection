@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Object detection using TensorFlow JS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Object detection using TensorFlow JS</h1>
+    Local video file : <input id="selectVideo" type="file" />
+    <p id="status">Awaiting TF.js load</p>
+  
+   
+
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/navendu-pottekkat"
+        aria-label="Follow @navendu-pottekkat on GitHub">Follow @navendu-pottekkat</a>
+
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/navendu-pottekkat/tfjs-object-detection" data-icon="octicon-star"
+        aria-label="Star navendu-pottekkat/tfjs-object-detection on GitHub">Star</a>
+
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/navendu-pottekkat/tfjs-object-detection/fork"
+        data-icon="octicon-repo-forked" aria-label="Fork navendu-pottekkat/tfjs-object-detection on GitHub">Fork</a>
+
+    <p>Wait for the model to load before clicking the button to enable the webcam - at which point it will become
+        visible to use.</p>
+
+    <section id="demos" class="invisible">
+
+        <p>Hold some objects up close to your webcam to get a real-time classification! When ready click "enable webcam"
+            below and accept access to the webcam when the browser asks (check the top left of your window)</p>
+
+        <div id="liveView" class="camView">
+            <button id="webcamButton">Enable Webcam</button>
+            <video id="video2"  width="358" height="656" src="" ></video>
+        </div>
+    </section>
+
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
+    <!-- Load the coco-ssd model to use to recognize things in images -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script src="script.js" defer></script>
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>
