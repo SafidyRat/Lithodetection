@@ -65,10 +65,11 @@ function enableCam(event) {
     }
   }
   
-  video.addEventListener( "loadedmetadata", function () {
+  video.addEventListener( "loadeddata", function () {
       //canvas.setAttribute("width", video.videoWidth);
       //canvas.setAttribute("height", video.videoHeight);
       videoPlaying = true;
+      console.log("running");
       predictWebcam();
   }, false );	
 
